@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## 空き家バンク
+
+- user table
+
+- house table
+
+- admin table
