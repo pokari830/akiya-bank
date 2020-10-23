@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .wapper{
+   background-color: #f7f4f0;
+   color: #333333;
+ }
