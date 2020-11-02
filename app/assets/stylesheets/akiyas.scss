@@ -6,7 +6,7 @@
 .header{
   height: 150px;
   width: 100%;
-  background-color: #2a5249;
+  background-color: #368836;
   color: #f7f4f0;
   font-size: 25px;
 }
@@ -43,6 +43,20 @@
 }
 
 .footer{
-  background-color: #2a5249;
+  background-color: #368836;
   color: #f7f4f0;
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    border: white;
+    li{
+      width: 25%;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border: 1px solid rgb(204, 204, 204);
+      background-color: white;
+      align-content: center;
+    }
+  }
 }
