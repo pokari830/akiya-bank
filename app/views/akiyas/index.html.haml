@@ -2,14 +2,15 @@
   .header
     .title
       %h1 空き家バンク
+      %p 
   .main
     .contents
-      .content__1
+      .content1
         .menu
           %ul.list
             %li
-              =link_to do
-                top
+              =link_to "", class:"btn__icon" do
+                = icon('fas', 'fa-home')
             %li
               =link_to do
                 猪名川町について
@@ -19,9 +20,14 @@
             %li
               =link_to do
                 掲載一覧
-      .content__2
-        .topix
-          写真
+      .content2
+        .topics
+          .topic
+            写真
+          .topic
+            写真
+          .topic
+            写真
       .content__3
         .interview
           利用者の声

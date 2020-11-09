@@ -14,9 +14,13 @@
  *= require_self
  */
 @import "reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "akiyas";
+
 
  .wapper{
    background-color: #f7f4f0;
    color: #333333;
+   height: 100vh;
  }
