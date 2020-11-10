@@ -19,7 +19,7 @@
 }
 .main{
   width: 100%;
-  background-color: #e5dbb5;
+  background-color: #eeeade;
   justify-content: center;
   padding-top: 5px;
   .contents{
@@ -40,12 +40,14 @@
           border: 1px solid rgb(204, 204, 204);
           background-color: white;
           align-content: center;
+
         }
       }
     }
     .content2{
       .topics{
-        margin-top: 10px;
+        margin-top: 100px;
+        margin-bottom: 100px;
         display: flex;
         justify-content: space-between;
         .topic{
@@ -66,20 +68,21 @@
   background-color: #368836;
   color: #f7f4f0;
   .menu{
-    display: flex;
-    justify-content: space-between;
-    border: white;
-    li{
-      width: 25%;
-      height: 50px;
-      text-align: center;
-      line-height: 50px;
-      border: 1px solid rgb(204, 204, 204);
-      background-color: white;
-      align-content: center;
-      .btn__icon{
-        color: black;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      li{
+        width: 25%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border: 1px solid rgb(204, 204, 204);
+        align-content: center;
+        .btn__icon{
+          color: black;
+        }
       }
     }
+
   }
 }
