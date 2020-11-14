@@ -16,10 +16,14 @@
   font-weight: bold;
   text-shadow: gray 2px 2px 10px;
   letter-spacing: 25px;
+  position: absolute;
+  .btn__icon{
+    z-index: 0;
+  }
 }
 .main{
   width: 100%;
-  background-color: #eeeade;
+  background-color: #f7f4f0;
   justify-content: center;
   padding-top: 5px;
   .contents{
