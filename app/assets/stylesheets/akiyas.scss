@@ -60,6 +60,41 @@
       }
 
     }
+    .content__3{
+      .interview{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &__top{
+          align-content: center;
+          height: 50px;
+          &--title{
+            margin: 0 auto;
+            width: 300px;
+            line-height: 50px;
+            background-color: #f5efe6;
+            color: white;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+        &__content{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 25px;
+          &--text{
+            border: solid 5px white;
+            border-radius: 10px;
+            margin-right: 15px;
+            padding: 15px 5px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 
 }
