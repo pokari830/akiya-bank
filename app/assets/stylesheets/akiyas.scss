@@ -70,7 +70,13 @@
           border: 1px solid black;
         }
         &__content{
-          margin: 0 auto;
+          margin: 0 auto 25px;
+          height: 300px;
+          width: 500px;
+          border: 1px solid black;
+        }
+        &__map{
+          margin: 0 auto ;
           height: 300px;
           width: 500px;
           border: 1px solid black;
