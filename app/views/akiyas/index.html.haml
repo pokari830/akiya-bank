@@ -26,7 +26,8 @@
       .content2
         .topics
           .topic
-            写真
+            = link_to "akiyas_path" do
+              写真
           .topic
             写真
           .topic
@@ -57,18 +58,4 @@
       .content__5
         .map
           相談はこちらまで
-  .footer
-    .menu
-      %ul.list
-        %li
-          = link_to do
-            top
-        %li
-          = link_to do
-            猪名川町について
-        %li
-          = link_to do
-            空き家バンクとは
-        %li
-          = link_to do
-            掲載一覧
+  =render "footer"
