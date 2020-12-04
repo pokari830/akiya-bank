@@ -15,25 +15,21 @@
               -# =link_to "", class:"btn__icon" do
               -#   = icon('fas', 'fa-home')
             %li
-              =link_to new_akiya_path do
-                新規登録
+              =link_to "新規登録", new_akiya_path
             %li
-              =link_to do
-                空き家バンクとは
+              =link_to "空き家バンクとは"
             %li
-              =link_to do
-                掲載一覧
+              =link_to "掲載一覧"
       .content2
         .topics
           .topic
-            = link_to akiyas_path do
-              写真
+            = link_to "photo", akiyas_path
           .topic
             写真
           .topic
             写真
 
-          -# = @akiya.shuffle.first(3).each do |a|
+          -# - @akiya.shuffle.first(3).each do |a|
           -#   .topic
           -#     = link_to "akiya_path(akiya)" do
           -#       = a.image
