@@ -69,6 +69,18 @@
           width: 500px;
           border: 1px solid black;
         }
+        &__categorys{
+          display: flex;
+          justify-content: center;
+          &--category{
+            padding: 2px 4px;
+            margin-right: 5px;
+            margin-bottom: 15px;
+            background-color: white;
+            border: rgb(248, 225, 194) 1px solid;
+            border-radius: 10px;
+          }
+        }
         &__content{
           margin: 0 auto 25px;
           height: 300px;
