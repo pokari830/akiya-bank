@@ -2,7 +2,7 @@ class AkiyasController < ApplicationController
 
   def index
     @akiya = Akiya.all
-    @akiyas = Akiya.paginate(page: params[:page], per_page: 10)
+    @akiyas = Akiya.page(params[:page]).per(10)
   end
 
   def show
@@ -27,7 +27,7 @@ class AkiyasController < ApplicationController
 
   private
   def akiya_params
-    params.require(:akiya)
+    params.require(:akiya).premit(:id, :address, :image)
   end
 
 end
