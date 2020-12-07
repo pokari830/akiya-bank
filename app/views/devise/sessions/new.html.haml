@@ -1,0 +1,19 @@
+.main
+  .login
+    %h2.login__top Log in
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field#email
+        = f.label :email, class: "login__email"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "login__email--box"
+      .field#password
+        = f.label :password, class: "login__password"
+        %br/
+        = f.password_field :password, autocomplete: "current-password", class: "login__password--box"
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me
+      .actions
+        = f.submit "Log in"
+    = render "devise/shared/links"
