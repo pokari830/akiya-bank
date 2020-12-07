@@ -1,6 +1,12 @@
 .wapper
   .header
-    .title
+    .header__top
+      .header__top--left
+        menu
+      .header__top--right
+        = link_to "user_session_path" do
+          ログイン
+    .header__title
       %h1 空き家バンク
     =link_to "", class:"btn__icon" do
       = icon("fas", "fa-sign-in-alt")
