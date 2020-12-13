@@ -1,0 +1,25 @@
+@import "akiyas";
+
+.main{
+  height: 100%;
+  text-align: center;
+  .login{
+    padding-top: 50px;
+    &__top{
+      margin-bottom: 15px;
+    }
+    &__email--box{
+      border: solid black 1px;
+      border-radius: 5px;
+      padding: 2px 2px;
+    }
+    &__password--box{
+      border: solid black 1px;
+      border-radius: 5px;
+      padding: 2px 2px;
+    }
+    .field{
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
- root 'akiyas#index'
+  root 'akiyas#index'
+  resources :akiyas, only: [:index, :new, :show, :create, :edit, :update, :delete]
 
 end

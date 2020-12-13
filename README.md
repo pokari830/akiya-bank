@@ -24,10 +24,24 @@ Things you may want to cover:
 * ...
 
 
-## 空き家バンク
+# 空き家バンクDB設計
 
-- user table
+## akiyas table
+|Column|Type|Options|
+|------|----|-------|
+|address|string|null: false|
+|image|string|null: false|
+|price|integer|null: false|
+|place|string|null: false|
+### Association
+- belongs_to :user
 
-- house table
+## users table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, default: ""|
+|password|string|null: false, default: ""|
+### Association
+- has_many :akiyas
 
-- admin table

@@ -1,16 +1,76 @@
-.header
-  .title
-    %h1 空き家バンク
-.main
-  .menu
-    %ul
-      %li top
-      %li 猪名川町について
-      %li 空き家バンクとは
-      %li 掲載一覧
-  .topix
-    写真
-  .contents
-    掲載物件
-.footer
-  猪名川町
+.wapper
+  .header
+    .header__top
+      .header__top--left
+        menu
+      .header__top--right
+        = link_to new_user_session_path do
+          ログイン
+    .header__title
+      %h1 空き家バンク
+    =link_to class:"btn__icon" do
+      = icon("fas", "fa-sign-in-alt")
+  .main
+    .contents
+      .content1
+        .menu
+          %ul.list
+            %li
+              = link_to do
+                TOP
+              -# =link_to "", class:"btn__icon" do
+              -#   = icon('fas', 'fa-home')
+            %li
+              =link_to "新規登録", new_akiya_path
+            %li
+              =link_to "空き家バンクとは"
+            %li
+              =link_to "掲載一覧"
+      .content2
+        .topics
+          .topic
+            = link_to "photo", akiyas_path
+          .topic
+            写真
+          .topic
+            写真
+
+          -# - @akiya.shuffle.first(3).each do |a|
+          -#   .topic
+          -#     = link_to "akiya_path(akiya)" do
+          -#       = a.image
+
+      .content__3
+        .interview
+          .interview__top
+            .interview__top--title
+              利用者の声
+          .interview__content
+            .interview__content--text
+              いい物件と出会うことができました
+              %br みんなにおすすめしたいです！
+
+            .interview__content--text
+              いい物件と出会うことができました
+              %br みんなにおすすめしたいです！
+
+            .interview__content--text
+              いい物件と出会うことができました
+              %br みんなにおすすめしたいです！
+
+      .content__4
+        .house
+          .house__top
+            .house__top--title
+              掲載物件
+      .content__5
+        .map
+          相談はこちらまで
+          .p Query稼働テスト
+          :javascript
+            $(function(){
+              $(document).ready(function(){
+                $('.p').text('jQuery稼動テスト（稼働中）');
+              });
+            });
+  =render "footer"

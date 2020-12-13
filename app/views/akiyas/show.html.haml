@@ -1,0 +1,36 @@
+.main
+  .contents
+    .content1
+      .menu
+        %ul.list
+          %li
+            = link_to "/" do
+              TOP
+          %li
+            =link_to do
+              猪名川町について
+          %li
+            =link_to do
+              空き家バンクとは
+          %li
+            =link_to do
+              掲載一覧
+
+    .content2
+      .akiya
+        .akiya__top
+          旭ヶ丘
+        .akiya__categorys
+          .akiya__categorys--category
+            古民家
+          .akiya__categorys--category
+            住宅地
+          .akiya__categorys--category
+            駅近
+          .akiya__categorys--category
+            広い
+        .akiya__content
+          間取り
+        .akiya__map
+          所在地
+=render "footer"

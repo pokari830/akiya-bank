@@ -1,0 +1,6 @@
+.login
+  .form
+    = form_with @user do |f|
+      = f.text_field :name, class: "name__field"
+      = f.text_field :pass, class: "encryped_password__field"
+      = f.text_field :address, class: "address__field"
