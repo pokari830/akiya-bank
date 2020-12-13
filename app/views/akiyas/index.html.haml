@@ -66,4 +66,11 @@
       .content__5
         .map
           相談はこちらまで
+          .p Query稼働テスト
+          :javascript
+            $(function(){
+              $(document).ready(function(){
+                $('.p').text('jQuery稼動テスト（稼働中）');
+              });
+            });
   =render "footer"

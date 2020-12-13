@@ -58,3 +58,4 @@ gem "gmaps4rails"
 gem "geocoder"
 gem "kaminari"
 gem "erb2haml"
+gem 'jquery-ui-rails'
