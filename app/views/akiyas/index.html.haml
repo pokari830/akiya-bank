@@ -1,4 +1,4 @@
-.wapper
+.wrapper
   .header
     .header__top
       .header__top--left
@@ -13,19 +13,7 @@
   .main
     .contents
       .content1
-        .menu
-          %ul.list
-            %li
-              = link_to do
-                TOP
-              -# =link_to "", class:"btn__icon" do
-              -#   = icon('fas', 'fa-home')
-            %li
-              =link_to "新規登録", new_akiya_path
-            %li
-              =link_to "空き家バンクとは"
-            %li
-              =link_to "掲載一覧"
+        =render "menubar"
       .content2
         .topics
           .topic
