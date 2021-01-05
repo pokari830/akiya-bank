@@ -14,6 +14,12 @@ class AkiyasController < ApplicationController
   end
 
   def create
+    @akiya = Akiya.new(akiya_params)
+    if @akiya.save
+      render root_path
+    else
+      render :new, alert: "正しく入力してください"
+    end
   end
 
   def update
@@ -27,7 +33,7 @@ class AkiyasController < ApplicationController
 
   private
   def akiya_params
-    params.require(:akiya).premit(:id, :address, :image)
+    params.require(:akiya).permit(:id, :address, :image).marge(user_id: current.id)
   end
 
 end

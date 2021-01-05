@@ -3,10 +3,22 @@
     .contents
       .content1
         = render "menubar"
-    .form
-      = form_for @akiya do |f|
-        = f.label :address, "住所",class: "address"
-        = f.text_field :address, class: "address_field"
-        = f.file_field :image, class: "image_field"
-        -# = f.select :category, [["古民家",1],["田舎", 2], ["駅近", 3]]
-        = f.submit class: "btn"
+      .form
+        %table
+          %th.title
+            物件情報を入力してください
+          = form_for @akiya do |f|
+            %tr
+              %td
+                = f.label :address, "住所",class: "address"
+              %td
+                = f.text_field :address, class: "address_field"
+            %tr
+              %td
+                = f.label :image, "画像",class: "image"
+              %td
+                = f.file_field :image, class: "image_field"
+              -# = f.select :category, [["古民家",1],["田舎", 2], ["駅近", 3]]
+            %tr
+              %td
+                = f.submit class: "btn", value: "submit"
