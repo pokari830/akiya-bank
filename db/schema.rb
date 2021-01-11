@@ -10,13 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201114080700) do
+ActiveRecord::Schema.define(version: 20210111130221) do
 
   create_table "akiyas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "address",    null: false
     t.string   "image",      null: false
-    t.integer  "price",      null: false
-    t.string   "place",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address"], name: "index_akiyas_on_address", unique: true, using: :btree

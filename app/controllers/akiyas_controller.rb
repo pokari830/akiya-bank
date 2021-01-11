@@ -33,7 +33,7 @@ class AkiyasController < ApplicationController
 
   private
   def akiya_params
-    params.require(:akiya).permit(:id, :address, :image).marge(user_id: current.id)
+    params.require(:akiya).permit(:address, :image)
   end
 
 end

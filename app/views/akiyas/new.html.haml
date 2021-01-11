@@ -1,24 +1,19 @@
 .wrapper
+  = alert
   .main
     .contents
       .content1
         = render "menubar"
-      .form
-        %table
-          %th.title
-            物件情報を入力してください
+      .form__new
+        .form__new--title
+          物件情報を入力してください
+        .form__new--contents
           = form_for @akiya do |f|
-            %tr
-              %td
-                = f.label :address, "住所",class: "address"
-              %td
-                = f.text_field :address, class: "address_field"
-            %tr
-              %td
-                = f.label :image, "画像",class: "image"
-              %td
-                = f.file_field :image, class: "image_field"
-              -# = f.select :category, [["古民家",1],["田舎", 2], ["駅近", 3]]
-            %tr
-              %td
-                = f.submit class: "btn", value: "submit"
+            .form__new--contents__address
+              = f.label :address, "住所",class: "address"
+              = f.text_field :address, class: "address__field"
+            .form__new--contents__image
+              = f.label :image, "画像",class: "image"
+              = f.file_field :image, class: "image__field"
+            .form__new--contents__btn
+              = f.submit class: "btn", value: "submit"
