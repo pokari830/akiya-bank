@@ -1,7 +1,7 @@
 class AkiyasController < ApplicationController
 
   def index
-    @akiya = Akiya.all
+    @akiyas = Akiya.all
     @akiyas = Akiya.page(params[:page]).per(10)
   end
 
@@ -16,7 +16,7 @@ class AkiyasController < ApplicationController
   def create
     @akiya = Akiya.new(akiya_params)
     if @akiya.save
-      render root_path
+      redirect_to root_path
     else
       render :new, alert: "正しく入力してください"
     end

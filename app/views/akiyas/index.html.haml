@@ -24,13 +24,14 @@
         =render "menubar"
       .content2
         .topics
-          - @akiya.shuffle.first(3).each do |a|
+          - @akiyas.shuffle.first(3).each do |a|
             .topic
-              .topic__address
-                = link_to "akiya_path(akiya)" do
-                  = a.address
-
-                  = a.image
+              = link_to akiya_path(a.id) do
+                .topic__content
+                  .topic__content--image
+                    .address
+                      = a.address
+                    = image_tag a.image.url, class: "image"
 
       .content__3
         .interview
