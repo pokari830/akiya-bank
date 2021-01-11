@@ -4,8 +4,16 @@
       .header__top--left
         menu
       .header__top--right
-        = link_to new_user_session_path do
-          ログイン
+        -if user_signed_in?
+          = link_to edit_user_registration_path do
+            設定
+          = link_to destroy_user_session_path do
+            ログアウト
+        -else
+          = link_to new_user_session_path do
+            ログイン
+          = link_to new_user_registration_path do
+            会員登録
     .header__title
       %h1 空き家バンク
     =link_to class:"btn__icon" do
