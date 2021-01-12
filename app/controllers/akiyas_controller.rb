@@ -22,7 +22,8 @@ class AkiyasController < ApplicationController
     end
   end
 
-  def update
+  def search
+    @akiyas = Akiya.all
   end
 
   def edit

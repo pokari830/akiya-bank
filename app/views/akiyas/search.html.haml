@@ -1,0 +1,10 @@
+.main
+  .contents
+    .content1
+      = render "menubar"
+
+    .content2
+      - @akiyas.each do |a|
+        = link_to akiya_path(a.id) do
+          = a.address
+          = image_tag a.image.url, class: "image"
