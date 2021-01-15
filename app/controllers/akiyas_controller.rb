@@ -16,9 +16,11 @@ class AkiyasController < ApplicationController
   def create
     @akiya = Akiya.new(akiya_params)
     if @akiya.save
+      flash.now[:notice] = '登録完了しました。'
       redirect_to root_path
     else
-      render :new, alert: "正しく入力してください"
+      flash.now[:alert] = '正しく入力してください。'
+      render :new
     end
   end
 
