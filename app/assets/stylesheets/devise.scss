@@ -2,24 +2,49 @@
 
 .main{
   height: 100%;
-  text-align: center;
   .login{
-    padding-top: 50px;
-    &__top{
-      margin-bottom: 15px;
+    display: flex;
+    height: 500px;
+    &__left{
+      width: 50%;
+      text-align: center;
+      .login{
+        width: 500px;
+        font-size: 50px;
+        font-weight: bold;
+        color: #00bda4;
+        line-height: 500px;
+        padding-left: 200px;
+      }
+
+    }
+    &__right{
+      width: 50%;
+      padding-top: 150px;
     }
     &__email--box{
-      border: solid black 1px;
+      border: solid rgba(146, 146, 146, 0.644) 2px;
       border-radius: 5px;
-      padding: 2px 2px;
+      padding: 5px 5px;
+      background-color: white;
     }
     &__password--box{
-      border: solid black 1px;
+      border: solid rgba(146, 146, 146, 0.644) 2px;
       border-radius: 5px;
-      padding: 2px 2px;
+      padding: 5px 5px;
+      background-color: white;
     }
     .field{
+      width: 400px;
       margin-bottom: 25px;
+      text-align: center;
+      .btn{
+      border: solid rgba(146, 146, 146, 0.644) 2px;
+      border-radius: 5px;
+      padding: 5px 5px;
+      background-color: white;
+      }
     }
+
   }
 }

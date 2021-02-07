@@ -1,11 +1,19 @@
-.wapper
+.wrapper
   .header
     .header__top
       .header__top--left
         menu
       .header__top--right
-        = link_to new_user_session_path do
-          ログイン
+        -if user_signed_in?
+          = link_to edit_user_registration_path do
+            設定
+          = link_to destroy_user_session_path do
+            ログアウト
+        -else
+          = link_to new_user_session_path do
+            ログイン
+          = link_to new_user_registration_path do
+            会員登録
     .header__title
       %h1 空き家バンク
     =link_to class:"btn__icon" do
@@ -13,32 +21,17 @@
   .main
     .contents
       .content1
-        .menu
-          %ul.list
-            %li
-              = link_to do
-                TOP
-              -# =link_to "", class:"btn__icon" do
-              -#   = icon('fas', 'fa-home')
-            %li
-              =link_to "新規登録", new_akiya_path
-            %li
-              =link_to "空き家バンクとは"
-            %li
-              =link_to "掲載一覧"
+        =render "menubar"
       .content2
         .topics
-          .topic
-            = link_to "photo", akiyas_path
-          .topic
-            写真
-          .topic
-            写真
-
-          -# - @akiya.shuffle.first(3).each do |a|
-          -#   .topic
-          -#     = link_to "akiya_path(akiya)" do
-          -#       = a.image
+          - @akiyas.shuffle.first(3).each do |a|
+            .topic
+              = link_to akiya_path(a.id) do
+                .topic__content
+                  .topic__content--image
+                    .address
+                      = a.address
+                    = image_tag a.image.url, class: "image"
 
       .content__3
         .interview

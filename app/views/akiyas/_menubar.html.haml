@@ -1,0 +1,20 @@
+.menu
+  %ul.list
+    %li
+      = link_to root_path do
+        TOP
+      -# =link_to "", class:"btn__icon" do
+      -#   = icon('fas', 'fa-home')
+    %li
+      - if user_signed_in?
+        =link_to new_akiya_path do
+          新規登録
+      - else
+        =link_to user_session_path do
+          新規登録
+    %li
+      =link_to do
+        空き家バンクとは
+    %li
+      = link_to search_akiyas_path do
+        掲載一覧

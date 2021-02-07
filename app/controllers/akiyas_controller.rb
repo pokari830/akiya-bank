@@ -1,7 +1,7 @@
 class AkiyasController < ApplicationController
 
   def index
-    @akiya = Akiya.all
+    @akiyas = Akiya.all
     @akiyas = Akiya.page(params[:page]).per(10)
   end
 
@@ -14,9 +14,18 @@ class AkiyasController < ApplicationController
   end
 
   def create
+    @akiya = Akiya.new(akiya_params)
+    if @akiya.save
+      flash.now[:notice] = '登録完了しました。'
+      redirect_to root_path
+    else
+      flash.now[:alert] = '正しく入力してください。'
+      render :new
+    end
   end
 
-  def update
+  def search
+    @akiyas = Akiya.all
   end
 
   def edit
@@ -27,7 +36,7 @@ class AkiyasController < ApplicationController
 
   private
   def akiya_params
-    params.require(:akiya).premit(:id, :address, :image)
+    params.require(:akiya).permit(:address, :image).marge(:madori_id)
   end
 
 end
