@@ -10,14 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210206081637) do
+ActiveRecord::Schema.define(version: 20210208133139) do
 
   create_table "akiyas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "address",    null: false
     t.string   "image",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "madori_id"
     t.index ["address"], name: "index_akiyas_on_address", unique: true, using: :btree
+    t.index ["madori_id"], name: "index_akiyas_on_madori_id", using: :btree
   end
 
   create_table "madoris", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

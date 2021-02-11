@@ -7,6 +7,7 @@ class AkiyasController < ApplicationController
 
   def show
     @akiya = Akiya.find(params[:id])
+    @madori = Madori.where(id: @akiya.madori_id)
   end
 
   def new
@@ -36,7 +37,7 @@ class AkiyasController < ApplicationController
 
   private
   def akiya_params
-    params.require(:akiya).permit(:address, :image).marge(:madori_id)
+    params.require(:akiya).permit(:address, :image, :madori_id)
   end
 
 end

@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "csv"
+# require "csv"
 
-CSV.foreach('db/madori.csv') do |row|
-  Madori.create(id: row[0], madori: row[1])
-end
+# CSV.foreach('db/madori.csv') do |row|
+#   Madori.create(id: row[0], madori: row[1])
+# end

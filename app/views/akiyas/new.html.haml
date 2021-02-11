@@ -15,5 +15,8 @@
             .form__new--contents__image
               = f.label :image, "画像",class: "image"
               = f.file_field :image, class: "image__field"
+            .form__new--content__madori
+              = f.label :madori, "間取り", class: "madori__field"
+              = f.collection_select :madori_id, Madori.all, :madori, :madori, prompt: "選択してください"
             .form__new--contents__btn
               = f.submit class: "btn", value: "submit"
